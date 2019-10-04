@@ -1,11 +1,25 @@
 public class Movie
 {
-    public string Title{get;set;}
-    public int Runtime{get;set;}
-    public Movie(string title,int runtime)
+    private string title;
+    private int runtime;
+   
+    public string Title
     {
-        Title=title;
-        Runtime=runtime;
-        
+        get { return title; }
+        set { title = value; }
     }
+
+    public int Runtime
+    {
+        get { return runtime; }
+        set { runtime = value; }
+    }
+
+    public override string ToString()
+    {
+        return  Title + " " + Runtime;
+    }
+   
+   
+   
 }
